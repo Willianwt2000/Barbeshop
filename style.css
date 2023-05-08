@@ -46,19 +46,30 @@ nav a:hover{
     font-size: 30px;
 }
 
+
 /* Pagina Producto***************************** */
 
+
 .productos{
-    width: 940px;
+    width: auto;
     margin: 0 auto;
     padding: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.img-productos {
+    width: 150px;
+    height: 150px;
 }
 
 
 .productos li{
     display: inline-block;
     text-align: center;
-    width: 30%;
+    width: auto;
     vertical-align: top;
     margin: 0 1.5%;
     padding: 30px 20px;
@@ -94,7 +105,7 @@ nav a:hover{
     margin-top:10px;
 }
 /* ********************************************* */
-
+/* Footer ************************* */
 footer{
     text-align: center;
     background: url(imagenes/bg.jpg);
@@ -108,8 +119,9 @@ footer{
 }
 
 /* *********************************************** */
-
+/* Formularios */
 form{
+    width: auto;
     margin: 40px 0;
 }
 
@@ -168,6 +180,8 @@ td,th{
     border: 1px solid #000000;
     padding: 8px 15px;
 }
+/**********************************/
+
 
 /*Aqui inicias css para nuestra pagina inicial, nuestra home */
 
@@ -281,6 +295,12 @@ td,th{
     margin: 1em auto;
 }
 
+/* responsive Para la pagina Productos */
+@media screen and (max-width: 780px) {
+    .productos {
+        grid-template-columns: 50% 50%;
+    }
+}
 
 /* Responsive para la pagina home */
 @media screen and (max-width:480px) {
@@ -298,17 +318,33 @@ td,th{
         width: 100%;
     }
 
+    .productos {
+        grid-template-columns: 100%;
+    }
 
-    .productos{
+    .formulario {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .table{
         width: auto;
         display: flex;
         flex-direction: column;
-        /* margin: 0 auto; */
-        /*justify-content: center;
-        align-items: center;*/
+        align-items: center;
+        justify-content: center;
     }
+
 }
 
 /* responsive Para la pagina Contacto */
-/* responsive Para la pagina Productos */
+
+
 
